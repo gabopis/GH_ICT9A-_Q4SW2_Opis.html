@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hour Converter</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="bg-info" style="margin: 100px;">
+	<div class="bg-light" style="padding: 40px; text-align: center;">
+	<h2><b>Hour Converter</b></h2>
+	<p>enter your value below</p>
+	<input type="text" id="id1" placeholder="Hours to Seconds"><br>
+	<input type="submit" value="compute" onclick="myFunction()"><br>
+	<p id="seconds"></p>	
+	<input type="text" id="id2" placeholder="Hours to Minutes"><br>
+	<input type="submit" value="compute" onclick="myFunction2()"><br>
+	<p id="minutes"></p>
+	<input type="text" id="id3" placeholder="Hours to Days"><br>
+	<input type="submit" value="compute" onclick="myFunction3()"><br>
+	<p id="days"></p>
+	<script>
+		function myFunction () {
+			var num1 = document.getElementById('id1').value;
+			var answer = 3600 * num1;
+			document.getElementById('seconds').innerHTML = "It is equivalent to " + answer + " seconds.";
+		}
+
+		function myFunction2 () {
+			var num2 = document.getElementById('id2').value;
+			var answer = num2 * 60;
+			document.getElementById('minutes').innerHTML = "It is equivalent to " + answer + " minutes.";
+		}
+
+		function myFunction3 () {
+			var num3 = document.getElementById('id3').value;
+			var answer = num3 / 24;
+			document.getElementById('days').innerHTML = "It is equivalent to " + answer + " days.";
+		}
+	</script>
+</body>
+</html>
